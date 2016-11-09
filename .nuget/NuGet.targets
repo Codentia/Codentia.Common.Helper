@@ -22,8 +22,8 @@
         <!--
             <PackageSource Include="https://www.nuget.org/api/v2/" />
         -->
-     <PackageSource Include="\\DBoxCodentia\NuGet" />
-     <PackageSource Include="https://www.nuget.org/api/v2/" />
+     <PackageSource Include="\\TEST01\NuGet"/>
+     <PackageSource Include="https://www.nuget.org/api/v2/"/>
 
     </ItemGroup>
 
