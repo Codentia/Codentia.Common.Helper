@@ -38,9 +38,8 @@
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codentia.Common.Types, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Common.Types.dll.1.1.2.20\lib\Codentia.Common.Types.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Common.Types">
+      <HintPath>..\..\packages\Codentia.Common.Types.dll.2.0.0.3\lib\Codentia.Common.Types.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
