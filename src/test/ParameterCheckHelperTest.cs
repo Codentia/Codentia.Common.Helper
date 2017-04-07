@@ -190,7 +190,7 @@ namespace Codentia.Common.Helper.Test
             Assert.That(delegate { ParameterCheckHelper.CheckIsValidEmailAddress("me@", 2, "testEmail"); }, Throws.InstanceOf<InvalidEmailAddressException>().With.Message.EqualTo("testEmail exceeds maxLength 2 as it has 3 chars"));
 
             // cannot have a plus on it's own, even with plus addressing
-            Assert.That(delegate { ParameterCheckHelper.CheckIsValidEmailAddress("+@notok.com", "testEmail"); }, Throws.InstanceOf<InvalidEmailAddressException>().With.Message.EqualTo("testEmail: +@notok.com is not a valid email address"));
+            Assert.That(delegate { ParameterCheckHelper.CheckIsValidEmailAddress("notok.com", "testEmail"); }, Throws.InstanceOf<InvalidEmailAddressException>().With.Message.EqualTo("testEmail: notok.com is not a valid email address"));
         }
 
         /// <summary>
