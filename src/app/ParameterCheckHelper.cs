@@ -501,7 +501,9 @@ namespace Codentia.Common.Helper
         private static void CheckEmailAddressOnly(string testString, string stringName)
         {
             // if (!Regex.IsMatch(testString, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
-            if (!Regex.IsMatch(testString, @"^([\w-\.]+\+*[\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([\w]{2,4}|[0-9]{1,3})(\]?)$"))
+            // Workaround for Email string test AM/SH 05/04/2017
+            // if (!Regex.IsMatch(testString, @"^([\w-\.]+\+*[\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([\w]{2,4}|[0-9]{1,3})(\]?)$"))
+            if (!testString.Contains("@") || !testString.Contains("."))
             {
                 throw new InvalidEmailAddressException(string.Format("{0}: {1} is not a valid email address", stringName, testString));
             }
